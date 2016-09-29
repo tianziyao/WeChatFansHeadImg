@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,39 +16,39 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="C0n-uW-Wqu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="C0n-uW-Wqu">
+                                <frame key="frameInset" width="320" height="568"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-kG-nm1">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-kG-nm1">
+                                <frame key="frameInset" width="320" height="568"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QYs-L8-pzY">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <frame key="frameInset"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="32t-GY-bas">
-                                            <rect key="frame" x="220" y="194" width="80" height="80"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="32t-GY-bas">
+                                            <frame key="frameInset" minX="220" minY="194" width="80" height="80"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="bo4-2d-ob4">
-                                            <rect key="frame" x="20" y="194" width="80" height="80"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="bo4-2d-ob4">
+                                            <frame key="frameInset" minX="20" minY="194" width="80" height="80"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-nU-aUP">
-                                            <rect key="frame" x="20" y="324" width="280" height="44"/>
-                                            <color key="backgroundColor" red="0.090196078430000007" green="0.68235294120000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-nU-aUP">
+                                            <frame key="frameInset" minX="20" minY="324" width="280" height="44"/>
+                                            <color key="backgroundColor" red="0.090196078430000007" green="0.68235294120000001" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="jZC-s3-DZE"/>
                                             </constraints>
                                             <state key="normal" title="微信粉丝头像">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="showHeadImageButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvW-Pm-3ox"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="NSz-fc-cfI">
-                                            <rect key="frame" x="120" y="194" width="80" height="80"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="NSz-fc-cfI">
+                                            <frame key="frameInset" minX="120" minY="194" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="gLQ-GL-V9w"/>
                                                 <constraint firstAttribute="width" constant="80" id="z6p-MJ-orf"/>
@@ -73,7 +74,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bfc-kG-nm1" secondAttribute="trailing" id="3JD-td-X10"/>
                             <constraint firstItem="bfc-kG-nm1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Azl-Rl-Lxl"/>
@@ -97,12 +98,11 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="showHeadImageButton" destination="qlT-nU-aUP" id="0QT-Kg-C4h"/>
-                        <outletCollection property="headImageViews" destination="32t-GY-bas" id="GWh-OW-pOD"/>
-                        <outletCollection property="headImageViews" destination="bo4-2d-ob4" id="iGr-se-ILG"/>
-                        <outletCollection property="headImageViews" destination="NSz-fc-cfI" id="DYE-Zk-M4x"/>
+                        <outletCollection property="headImageViews" destination="32t-GY-bas" collectionClass="NSMutableArray" id="GWh-OW-pOD"/>
+                        <outletCollection property="headImageViews" destination="bo4-2d-ob4" collectionClass="NSMutableArray" id="iGr-se-ILG"/>
+                        <outletCollection property="headImageViews" destination="NSz-fc-cfI" collectionClass="NSMutableArray" id="DYE-Zk-M4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

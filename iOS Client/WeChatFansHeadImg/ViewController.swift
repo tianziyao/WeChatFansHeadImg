@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var headImageViews: [UIImageView]!
     
-    @IBAction func showHeadImageButtonDidTouch(sender: AnyObject) {
+    @IBAction func showHeadImageButtonDidTouch(_ sender: AnyObject) {
         
         getWechatFansHeadImgs()
         
@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         self.pleaseWait()
         
         //let request = NSURLRequest(URL: NSURL(string: "http://localhost:8888/i/wechat/getuserinfo.php")!)
-        let request = NSURLRequest(URL: NSURL(string: "http://123.206.27.127/wechat/getuserinfo.php")!)
+        let request = URLRequest(url: URL(string: "http://123.206.27.127/wechat/getuserinfo.php")!)
 
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, resp, error) in
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, resp, error) in
             
             if error != nil {
                 print(error?.localizedDescription)
@@ -45,14 +45,14 @@ class ViewController: UIViewController {
                 //let strimgLinks = String(data: data!, encoding: NSUTF8StringEncoding) //PHP格式数组
                 //print(strimgLinks!)
                 var imgLinks: [String] = []
-                let readingOprions = NSJSONReadingOptions.MutableContainers
-                imgLinks = try! NSJSONSerialization.JSONObjectWithData(data!, options: readingOprions) as! Array//nil
+                let readingOprions = JSONSerialization.ReadingOptions.mutableContainers
+                imgLinks = try! JSONSerialization.jsonObject(with: data!, options: readingOprions) as! Array//nil
                 print(imgLinks)
                 
                 for i in 0..<imgLinks.count {
                     if imgLinks[i] != "" {
-                        let data = NSData(contentsOfURL: NSURL(string: imgLinks[i])!)
-                        dispatch_async(dispatch_get_main_queue(), {
+                        let data = try? Data(contentsOf: URL(string: imgLinks[i])!)
+                        DispatchQueue.main.async(execute: {
                             self.headImageViews[i].image = data != nil ? UIImage(data: data!) : UIImage(named: "QRCode")
                             print(i)
                         })
@@ -60,13 +60,13 @@ class ViewController: UIViewController {
                 }
                 
                 
-                print(NSThread.currentThread())
-                dispatch_async(dispatch_get_main_queue(), {
+                print(Thread.current)
+                DispatchQueue.main.async(execute: {
                     self.clearAllNotice()
                     self.noticeOnlyText("Uh oh,他好可怜没有粉丝，你来关注一下它吧~", autoClear: true, autoClearTime: 2)
                 })
             }
-        }
+        }) 
         task.resume()
     }
 
